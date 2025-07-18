@@ -1,0 +1,7 @@
+{
+  "theme": "obsidian",
+  "enabledCssSnippets": [
+    "smaller-code-block"
+  ],
+  "baseFontSize": 13
+}

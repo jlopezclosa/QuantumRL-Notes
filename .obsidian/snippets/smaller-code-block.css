@@ -1,0 +1,5 @@
+/* Make code blocks font smaller */
+.markdown-preview-view pre, 
+.markdown-source-view pre {
+  font-size: 0.8em; /* adjust this value as you like */
+}
