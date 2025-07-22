@@ -1,24 +1,16 @@
 # MARL
 
-Learning from other intelligent agents in the environment
-
-Generate **feasible** solutions step-by-step taking into account constraints -> generalize to new environments and learn more complex behavior. 
-Multi-agent reinforcement learning for microprocessor design space exploration: many components of a microprocessor, each is assigned an independent agent. This works much better than a single-agent setting. 
-
-May be difficult to actually discover the optimal solution - high sample complexity or failed training
-Can generalize poorly to new distribution
-
-How can MARL help? -> decentralized training to improve sample complexity
-Adversarial training to improve robustness
-
-MARL for sequential satellite assignment problems. POMDP
-
-Traveling salesman problem: 
-
 # Autoregressive methods
 
+## Combinatorial optimization Markov Decision Process
 
+Definition extracted from [[Sym-NCO - Leveraging Symmetricity for Neural Combinatorial Optimization|Sym-NCO]]
 
+A CO-MDP is defined as the sequential construction of a solution of COP. For a given problem instance $\mathbf{P}$, the components of the corresponding CO-MDP are as follows: 
+
+* **State.** The state $s_t = (\mathbf{a}_{1:t}, \mathbf{x}, \mathbf{f})$ is the $t$-th (partially complete) solution, where $\mathbf{a}_{1:t}$ represents the previously selected nodes. The initial and terminal states $s_0$ and $s_T$ are equivalent to the empty and completed solution, respectively. In this paper, we denote the solution $\pi(P)$ as the completed solution. 
+* **Action.** The action $a_t$ is the selection of a node from the unvisited nodes (i.e., $a_t \in \mathcal{A}_t = \{\{1,...,N\} \setminus \{\mathbf{a}_{1:t-1}\}\})$.
+* **Reward.** The reward function $R(\pi; P)$ maps the objective value from given $\pi$ of problem $P$. 
 ## Formulation
 
 The problem $\textbf{x}$ is first encoded using a **trainable** encoder $f_\theta$, obtaining an encoded representation $\textbf{h}$: 
