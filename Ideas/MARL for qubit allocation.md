@@ -32,7 +32,7 @@ The nodes for the agents could be:
 - An indicator if the qubit has gate interactions? For instance, it would be 0 if it's free. Perhaps it's redundant.
 - Gates relations -  which qubits it shares gate with. At first glance, this might problematic to encode, because as the number of qubits increases, so does the state. Thus:
 	- $z$ depends on the number of agents. Recall that TransfQmix is independent of the number of entities in the sense that it doesn't matter how many rows (entities) we add. However it should matter if we add or remove columns (change feature dimensionality)!
-	- BUT! [[Quantum circuit slicing|Circuit slices]] ONLY contain gates that are not sharing any of the logical qubits they act on. So one qubit can be interacting at most with another qubit. So perhaps we can encode this feature as a categorial number, not with one-hot
+	- BUT! [[Quantum circuit slicing|Circuit slices]] ONLY contain gates that are not sharing any of the logical qubits they act on. So one qubit can be interacting at most with another qubit. So perhaps we can encode this feature as a categorial number, not with one-hot encoding. 
 	
 ## Core agents
 

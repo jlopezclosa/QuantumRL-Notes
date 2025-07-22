@@ -69,7 +69,7 @@ where $Q$ is the distribution of random orthogonal matrices, $Q^l$ is the $l^{\t
 
 This loss is actually an extension of $\mathcal{L}_{ss}$ that can both leverage problem symmetricity and solution symmetricity simultaneously. However, some specific CO problems such as TSP have cyclic nature with pre-identifiable solution symmetricity that it's advantageous to exploit. $\beta$ can be set to 0 if the solution symmetricity cannot be pre-identified.
 
-### Regularization loss $\mathcal{L}_{\text{inv}}$ and projection head
+### Regularization loss $\mathcal{L}_{\text{inv}}$ 
 
 The encoder of $F_\theta$ can be enforced to have invariant representation by leveraging a pre-identified symmetricity.
 
@@ -83,6 +83,11 @@ where $S_{\cos}(a, b)$ is the cosine similarity between $a$ and $b$. $g$ is the 
 
 Penalizing the difference between $g(h(x))$ and $g(h(Q(x)))$ instead of  $h(x)$ and $h(Q(x))$ allows the use of an arbitrary encoder network architecture while maintaining the diversity of $h$.
 
+### Projection head
+
+The projection head is a simple two-layer perception with the ReLU activation function, where input/output/hidden dimensions are equals to encoder’s embedding dimension. 
+
+Its use is inspired by contrastive learning, where it's commonly used so that the **backbone feature extractor** isn't compromised by the loss applied to the **projection space**. 
 
 # Results
 
