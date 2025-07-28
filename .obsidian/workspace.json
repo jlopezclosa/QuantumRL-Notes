@@ -4,63 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "5fa70f8dc5b38a2a",
+        "id": "29933194a321dcd0",
         "type": "tabs",
         "children": [
           {
-            "id": "5e8c80c92bf96099",
+            "id": "51021eb6b422a07c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Papers/Attention-Based Deep Reinforcement Learning for Qubit Allocation in Modular Quantum Architectures.md",
+                "file": "Meetings.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Attention-Based Deep Reinforcement Learning for Qubit Allocation in Modular Quantum Architectures"
-            }
-          },
-          {
-            "id": "149c24fbd66b7c6d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Ideas/MARL for qubit allocation.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "MARL for qubit allocation"
-            }
-          },
-          {
-            "id": "04cd814102c0904c",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
-            }
-          },
-          {
-            "id": "910d034dda45e3dd",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Quantum Theory/Quantum circuit slicing.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Quantum circuit slicing"
+              "title": "Meetings"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -207,30 +168,37 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "04cd814102c0904c",
+  "active": "51021eb6b422a07c",
   "lastOpenFiles": [
-    "Images/symreptrain-method.png",
-    "Papers/Symmetric Replay Training - Enhancing Sample Efficiency in Deep Reinforcement Learning for Combinatorial Optimization.md",
-    "Papers/Attention-Based Deep Reinforcement Learning for Qubit Allocation in Modular Quantum Architectures.md",
-    "Papers/Sym-NCO - Leveraging Symmetricity for Neural Combinatorial Optimization.md",
-    "Ideas/Symmetry for Qubit Allocation.md",
-    "Ideas/Monte Carlo Tree Search for Qubit allocation.md",
-    "Ideas/MARL for qubit allocation.md",
-    "Papers/Graph Automorphism Group Equivariant Neural Networks.md",
-    "Quantum Theory/Quantum circuit slicing.md",
-    "Images/symnco_results.png",
-    "Images/graph_automorphism.png",
-    "Pasted image 20250721173318.png",
-    "Images/symnco_method.png",
-    "Images/symnco_symmetricity.png",
+    "MCTS + PPO in TSP.md",
+    "Pooling methods.md",
+    "Baseline methods.md",
     "RL methods for CO and qubit allocation.md",
-    "MARL Concepts.md",
-    "Papers/TransfQMix - Transformers for Leveraging the Graph Structure of Multi-Agent Reinforcement Learning Problems.md",
+    "Problem representation.md",
+    "Images/mario_proposal_2.png",
+    "Images/mario_proposal_1.png",
+    "Ideas/MARL for qubit allocation.md",
+    "Ideas/Symmetry for Qubit Allocation.md",
+    "Ideas/Proposed method - AR constructive with symmetry losses.md",
+    "Papers/Sym-NCO - Leveraging Symmetricity for Neural Combinatorial Optimization.md",
+    "Papers/Attention-Based Deep Reinforcement Learning for Qubit Allocation in Modular Quantum Architectures.md",
     "Papers/Leveraging graph-based RL for qubit allocation on multi-core quantum computing architectures.md",
-    "Images/circuitslicing.png",
-    "Background.md",
-    "Quantum Theory/Quantum basics.md",
+    "MARL Concepts.md",
+    "Ideas/Monte Carlo Tree Search for Qubit allocation.md",
     "Quantum Theory/The Quantum Allocation problem.md",
+    "Papers/TransfQMix - Transformers for Leveraging the Graph Structure of Multi-Agent Reinforcement Learning Problems.md",
+    "Meetings.md",
+    "Papers.md",
+    "Papers/Symmetric Replay Training - Enhancing Sample Efficiency in Deep Reinforcement Learning for Combinatorial Optimization.md",
+    "Papers/Graph Automorphism Group Equivariant Neural Networks.md",
+    "Images/symreptrain-method.png",
+    "Images/symnco_symmetricity.png",
+    "Images/symnco_results.png",
+    "Images/symnco_method.png",
+    "Images/graph_automorphism.png",
+    "Quantum Theory/Quantum basics.md",
+    "Quantum Theory/Quantum circuit slicing.md",
+    "Background.md",
     "Ideas",
     "Images/transqmix_features.png",
     "Images/transqmix_method.png",
@@ -239,14 +207,9 @@
     "Data.md",
     "(q1, q2).md",
     "Images",
-    "Pooling methods.md",
-    "Baseline methods.md",
-    "Problem representation.md",
-    "Solving conflicts.md",
     "Papers",
     "Untitled.canvas",
     "Untitled 1.canvas",
-    "Quantum Theory",
-    "Welcome.md"
+    "Quantum Theory"
   ]
 }

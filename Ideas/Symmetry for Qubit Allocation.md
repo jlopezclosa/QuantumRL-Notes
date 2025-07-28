@@ -35,6 +35,9 @@ If all quantum cores are identical (all interconnected, same gate-set, and same 
 $$C_{1} = \{q_{1}, q_{2}\}, C_{2} = \{q_{3}, q_{4}\}$$
 This assignment is the same as $C_{1} = \{q_{3}, q_{4}\}, C_{2} = \{q_{1}, q_{2}\}$. Therefore, they should be Q-invariant. 
 However, it's not clear that we can make all these assumptions. 
+### Starting qubit symmetry
+
+Always starting from qubit $q_0$ can make the model favor the first qubit, from which then we build our action masking procedure. Therefore, we should guarantee that, if we start from any qubit $q_n$, we get the same solution but permuted. 
 ### Swap symmetry
 
 A particular solution symmetry regards the SWAPS: $Q(\text{swap}(q_{1}, q_{2}) = Q(\text{swap}(q_{2}, q_{1})$. Namely, the Q-value of the 2 possible swaps combining a pair of gates should be invariant to the action of $C_2$. 
@@ -64,6 +67,10 @@ An intuition: the fact that a slice follows a similar one, or is followed by ano
 ## Decoder
 
 The qubit representation $E^{(Q)}_q$ changes at each decoding step, because they use only the representation of the qubit being allocated. It's easy to see that this will also break equivariance in the decoder. 
+
+## Possible solution:
+
+Functional embeddings, tied to qubit properties (intrinsic to the qubit, not its label)?
 
 # Breaking symmetries
 

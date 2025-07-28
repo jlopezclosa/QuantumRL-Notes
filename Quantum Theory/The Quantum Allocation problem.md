@@ -1,0 +1,1 @@
+Consider $t$ quantum circuit slices. In each slice, there can be no more than one multiqubit gate per qubit - i.e. each qubit is allowed to share a gate with one other qubit only. At complication time, allocate $Q$ logical qubits in $C$ cores so that interchanges between cores are minimized during program execution. 
