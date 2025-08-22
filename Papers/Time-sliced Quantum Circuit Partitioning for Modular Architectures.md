@@ -59,7 +59,7 @@ It's a relaxed version of OEE - more generally speaking, a partitioning algorith
 > selects pairs of vertices in a graph to exchange between partitions based on the weights between the vertices themselves and the total weight between the vertices and the partitions
 
 - OEE is ran until the partition is valid for the time slice (all interacting qubits are in the same partition) and then make no more exchanges
-- This also speeeds up OEE
+- This also speeds up OEE
 
 ### Lookahead functions
 
@@ -109,3 +109,62 @@ So the edge multiset is: {A→B, B→C, C→A, A→C}. Then, we extract the cycl
 - There’s a **3-cycle**: A→B→C→A (edges: A→B, B→C, C→A).  We remove it and record **c₃ = 1**.
 
 Remaining edges: {A→C}. There are no more cycles. Thus,  we have **r = 1** edge left (A→C).  This represents a move that can’t be paired with others (swap with an empty slot). We use the previous formula and get that $C=1  +  (3−1)⋅1  =  1+2  =  3$. Thus, the 3-cycle (A→B→C→A) can be done with 2 swaps instead of 3 separate moves. The leftover A→C move has no partner and costs 1 on its own.
+
+# Appendix: OEE
+
+## Problem  setup
+
+We have:
+- An **undirected weighted graph** $G$ with $n$ vertices.
+- We want to split the vertices into $k$ equal-size partitions (clusters).
+- The **goal**: Minimize the cut cost i.e., the sum of weights of edges crossing between partitions.
+## Kernighan–Lin (KL) background
+
+The classic KL heuristic works like this for _two-way_ partitioning:
+
+1. **Locking passes**:
+    - Start with the current partitioning.
+    - Repeatedly choose the _best single swap_ of a vertex from partition A with one from partition B that improves the cut cost the most.
+    - Lock those two vertices (so they’re not moved again this pass) and update scores.
+    - Keep going until all vertices are locked.
+2. **Apply best prefix**:
+    - Keep track of the cumulative gain after each swap in the pass.
+    - Only commit to the prefix of swaps that gave the highest total gain.
+
+## OEE Extension
+
+OEE generalizes KL in two ways:
+- **Multiple partitions** (k-way, not just 2-way).
+- **Extreme exchanges**: In each pass, OEE still builds a _sequence_ of swaps (two vertices in different partitions) but searches across **all pairs of partitions** to find the single best pair at each step.
+### Step-by-step OEE (per pass)
+
+**Inputs**:
+- Graph $G$
+- Current partitioning (balanced: $n/k$ per partition)
+
+**Data structures**:
+
+- $W[i,l]$: Sum of weights from vertex $i$ to all vertices in cluster $l$
+- $D[i,l]$: Gain if vertex $i$ were moved to cluster $l$, computed as:  $$D[i,l]=W[i,l]−W[i, \text{current\_cluster}(i)]$$
+- Unlocked set: vertices not yet moved in this pass.
+
+**Algorithm**: 
+
+1. Initialize **W**, **D** from the current partitioning.
+2. Repeat until all vertices locked:
+	* Consider every ordered pair of distinct clusters (**A**, **B**).
+	* For each unlocked $i \in A$ and $j \in B$, compute the exchange gain: $$
+		g(i,j) = D[i,B] + D[j,A] - 2 \cdot w_{ij}$$
+		This says:
+		* $D[i, B]$: benefit of moving i to B
+		* $D[j, A]$: benefit of moving j to A
+		* Subtract $2w_{ij}$ because the i-j edge is counted twice and will flip from cut→internal or vice versa.
+	* Choose the pair with maximum $g(i,j)$.
+	* Record the gain and the pair.
+	* Lock $i$ and $j$ for the rest of this pass.
+	* Temporarily swap them in the working partitioning, and update **W** and **D** efficiently.
+
+3. Best prefix rule:
+After the pass, sum gains cumulatively; pick the prefix of swaps with the highest total gain > 0.
+
+4. Commit those swaps to the **real** partitioning.

@@ -4,61 +4,38 @@
     "type": "split",
     "children": [
       {
-        "id": "29933194a321dcd0",
+        "id": "5fa70f8dc5b38a2a",
         "type": "tabs",
         "children": [
           {
-            "id": "51021eb6b422a07c",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "Images/fgpoee_directedgraph.png"
-              },
-              "icon": "lucide-image",
-              "title": "fgpoee_directedgraph"
-            }
-          },
-          {
-            "id": "aaec9604fcb285fc",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "Images/fgpoee_lookageadweights.png"
-              },
-              "icon": "lucide-image",
-              "title": "fgpoee_lookageadweights"
-            }
-          },
-          {
-            "id": "17a68d4780a7b285",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "Images/fgpoee_lookaheadfunctions.png"
-              },
-              "icon": "lucide-image",
-              "title": "fgpoee_lookaheadfunctions"
-            }
-          },
-          {
-            "id": "497e30b997ccef65",
+            "id": "5e8c80c92bf96099",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Papers/Time-sliced Quantum Circuit Partitioning for Modular Architectures.md",
+                "file": "Ideas/PARCO-inspired method.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Time-sliced Quantum Circuit Partitioning for Modular Architectures"
+              "title": "PARCO-inspired method"
+            }
+          },
+          {
+            "id": "149c24fbd66b7c6d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Ideas/MARL for qubit allocation.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "MARL for qubit allocation"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -197,6 +174,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:Create new base": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -205,44 +183,44 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "497e30b997ccef65",
+  "active": "5e8c80c92bf96099",
   "lastOpenFiles": [
-    "Papers/TransfQMix - Transformers for Leveraging the Graph Structure of Multi-Agent Reinforcement Learning Problems.md",
     "Papers/Attention-Based Deep Reinforcement Learning for Qubit Allocation in Modular Quantum Architectures.md",
-    "Papers/Graph Automorphism Group Equivariant Neural Networks.md",
-    "Papers/Sym-NCO - Leveraging Symmetricity for Neural Combinatorial Optimization.md",
+    "Ideas/Proposed method - AR constructive with symmetry losses.md",
+    "Ideas/MARL for qubit allocation.md",
+    "Papers/TransfQMix - Transformers for Leveraging the Graph Structure of Multi-Agent Reinforcement Learning Problems.md",
+    "Ideas/PARCO-inspired method.md",
+    "Papers/Parallel AutoRegressive Models for Multi-Agent Combinatorial Optimization.md",
     "Papers/Leveraging graph-based reinforcement learning for qubit allocation on multi-core quantum computing architectures.md",
+    "Papers/Sym-NCO - Leveraging Symmetricity for Neural Combinatorial Optimization.md",
+    "Images/parco_example.png",
+    "Images/parco_priorityhandler.png",
+    "Pasted image 20250811153219.png",
+    "Images/parco_overview.png",
+    "Papers/Time-sliced Quantum Circuit Partitioning for Modular Architectures.md",
+    "Images/graphquantum_staterepresentation.png",
+    "Images/graphquantum_scheme.png",
     "Images/fgpoee_resultscomparison.png",
     "Images/fgpoee_lookaheadfunctions.png",
     "Images/fgpoee_lookageadweights.png",
     "Images/fgpoee_directedgraph.png",
-    "Images/graphquantum_staterepresentation.png",
-    "Images/graphquantum_scheme.png",
-    "Papers/Time-sliced Quantum Circuit Partitioning for Modular Architectures.md",
-    "Papers/Leveraging graph-based RL for qubit allocation on multi-core quantum computing architectures.md",
+    "Quantum Theory/Quantum circuit slicing.md",
     "Ideas/Symmetry for Qubit Allocation.md",
-    "Pooling methods.md",
-    "Ideas/MARL for qubit allocation.md",
-    "Ideas/Proposed method - AR constructive with symmetry losses.md",
+    "Papers.md",
     "Meetings.md",
     "MCTS + PPO in TSP.md",
-    "Baseline methods.md",
-    "RL methods for CO and qubit allocation.md",
-    "Problem representation.md",
-    "Images/mario_proposal_2.png",
-    "Images/mario_proposal_1.png",
-    "MARL Concepts.md",
-    "Ideas/Monte Carlo Tree Search for Qubit allocation.md",
-    "Quantum Theory/The Quantum Allocation problem.md",
-    "Papers.md",
     "Papers/Symmetric Replay Training - Enhancing Sample Efficiency in Deep Reinforcement Learning for Combinatorial Optimization.md",
-    "Images/symreptrain-method.png",
-    "Images/symnco_symmetricity.png",
-    "Quantum Theory/Quantum basics.md",
-    "Quantum Theory/Quantum circuit slicing.md",
+    "Ideas/Monte Carlo Tree Search for Qubit allocation.md",
+    "Papers/Graph Automorphism Group Equivariant Neural Networks.md",
+    "RL methods for CO and qubit allocation.md",
+    "MARL Concepts.md",
+    "Papers/Leveraging graph-based RL for qubit allocation on multi-core quantum computing architectures.md",
     "Background.md",
+    "Quantum Theory/Quantum basics.md",
+    "Quantum Theory/The Quantum Allocation problem.md",
     "Ideas",
     "Types of actions.md",
+    "Data.md",
     "Images",
     "Papers",
     "Untitled.canvas",

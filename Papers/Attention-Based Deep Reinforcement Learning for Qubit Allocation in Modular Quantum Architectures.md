@@ -405,5 +405,7 @@ class Decoder(nn.Module):
 
 A policy trained on 100 qubits can still be used to allocate circuits with fewer qubits, but with some performance degradation as the circuits depth increases.
 
+According to the paper, they trained the models on random circuit with a fixed amount of used logical qubits, namely 50 and 100. However, the trained models can be used to map circuits with a number of used qubits **less or equal the number on which they were trained**.
+
 Thus, they note that training the policies with circuits with a variable number of used qubits might increase generalization capability. 
 
